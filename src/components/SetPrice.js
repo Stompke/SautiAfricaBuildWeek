@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import { connect } from 'react-redux';
+import { MainSection} from '../StyledComponents/MainComponents';
+
 
 const initialCategories = [
     {
@@ -28,7 +30,7 @@ const SetPrice = (props) => {
     }, []);
 
     return (
-        <div>
+        <MainSection>
             <h1>Profile</h1>
             {categories.map(category => (
                 <Link to={`/set-price/${category.id}`}>
@@ -40,7 +42,7 @@ const SetPrice = (props) => {
                     </div>
                 </Link>
             ))}
-        </div>
+        </MainSection>
     );
 };
 

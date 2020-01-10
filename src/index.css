@@ -272,3 +272,8 @@ Styles for the Gallery
   margin: 5%;
   margin-left: 30%;
 }
+
+.App {
+  display: flex;
+  height: 100vh;
+}

@@ -3,6 +3,8 @@ import React from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import { MainSection} from '../StyledComponents/MainComponents';
+
 
 let userId;
 
@@ -40,7 +42,7 @@ class AddItem extends React.Component {
 
     render() {
         return (
-            <div className="home-page">
+            <MainSection>
                 <h1>Add Item</h1>
                 <div className="addFormStyles">
                     <form onSubmit={this.add} className="regFormStyles">
@@ -74,7 +76,7 @@ class AddItem extends React.Component {
                         <button className="postButton">Add</button>
                     </form>
                 </div>
-            </div>
+            </MainSection>
         );
     }
 }

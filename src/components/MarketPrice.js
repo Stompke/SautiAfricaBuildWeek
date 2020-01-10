@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 // import { UserContext } from '../contexts/UserContext';
+import { MainSection} from '../StyledComponents/MainComponents';
+
 
 const initialCategories = [
     {
@@ -24,7 +26,7 @@ const MarketPrice = () => {
     }, []);
 
     return (
-        <div>
+        <MainSection>
             <h1>Market Price</h1>
         <div className="market-price">
             {categories.map(category => (
@@ -36,7 +38,7 @@ const MarketPrice = () => {
                 </Link>
             ))}
         </div>
-        </div>
+        </MainSection>
     );
 };
 

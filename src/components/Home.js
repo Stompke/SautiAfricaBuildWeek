@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { connect } from 'react-redux';
-import { CustomButton } from '../StyledComponents/MainComponents'; 
+import { CustomButton, MainSection } from '../StyledComponents/MainComponents'; 
+
+
 
 const Home = (props) => {
 
@@ -34,7 +36,7 @@ const Home = (props) => {
     }
  
     return (
-        <div className="home-page">
+        <MainSection>
             <h1>Welcome to the Market!!!</h1>
                 <div className="login-form">
                     <form> 
@@ -42,7 +44,7 @@ const Home = (props) => {
                     {buttonRegister}
                     </form>
                 </div>
-        </div>
+        </MainSection>
     );
 }
 export default Home;
