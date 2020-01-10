@@ -14,7 +14,8 @@ export const heading = {
 
 export const locationCard = {
     background: '#E82D50',
-    marginBottom: '15px'
+    marginBottom: '15px',
+    paddingLeft: '0px'
 }
 
 export const locationCardButton = {
