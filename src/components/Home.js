@@ -2,8 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { connect } from 'react-redux';
-import { CustomButton, MainSection } from '../StyledComponents/MainComponents'; 
+import { CustomButton, MainSection, Title } from '../StyledComponents/MainComponents'; 
 import mapAgeCleaner from "map-age-cleaner";
+import { heading, locationCard, locationCardButton } from '../styles/OtherStyles'
+import NextBackNavigation from './NextBackNavigation';
+
+
+
+import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 
 
 
@@ -51,7 +57,8 @@ const Home = (props) => {
  
     return (
         <MainSection>
-            <h1>Welcome to the Market!!!</h1>
+            <NextBackNavigation back={() => props.history.goBack()} next={() => props.history.goForward()} />
+            <Title>Welcome to the Market!!!</Title>
                 <div className="login-form">
                     <form> 
                     {buttonLog}
@@ -61,12 +68,20 @@ const Home = (props) => {
 
             <div>
                 <h2>Locations You can Sell in!</h2>
-
-                {locations.map(location => {
-                    return(
-                    <div key={location.id}> {location.country} </div>
-                    )
-                })}
+                <Row>
+                    {locations.map(location => {
+                        return(
+                        // <div key={location.id}> {location.country} </div>
+                        <Col  key={location.id} sm="3">
+                            <Card style={locationCard} body>
+                            <CardTitle style={heading}>{location.country}</CardTitle>
+                            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                            <Button style={locationCardButton}>See Products</Button>
+                            </Card>
+                        </Col>
+                        )
+                    })}
+                </Row>
             </div>
             
         </MainSection>

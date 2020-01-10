@@ -3,7 +3,8 @@ import React from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import { MainSection} from '../StyledComponents/MainComponents';
+import { MainSection, Title} from '../StyledComponents/MainComponents';
+import NextBackNavigation from './NextBackNavigation';
 
 
 let userId;
@@ -19,7 +20,7 @@ class AddItem extends React.Component {
         },
         userId: '',
     };
-
+    
     handleChange = e => {
         this.setState({
             credentials: {
@@ -28,22 +29,23 @@ class AddItem extends React.Component {
             }
         });
     };
-
+    
     add = e => {      
         e.preventDefault();
         const id = this.props.userId;
         axiosWithAuth()
-            .post(`https://build-week-africanmarketplace.herokuapp.com/api/users/${id}/items`, this.state.credentials)
-            .then(res => {
-                this.props.history.push('/set-price');
-            })
-            .catch(err => console.log(err.response));
+        .post(`https://build-week-africanmarketplace.herokuapp.com/api/users/${id}/items`, this.state.credentials)
+        .then(res => {
+            this.props.history.push('/set-price');
+        })
+        .catch(err => console.log(err.response));
     };
-
+    
     render() {
         return (
             <MainSection>
-                <h1>Add Item</h1>
+                <NextBackNavigation back={() => this.props.history.goBack()} next={() => this.props.history.goForward()} />
+                <Title>Add Item</Title>
                 <div className="addFormStyles">
                     <form onSubmit={this.add} className="regFormStyles">
                         <div>

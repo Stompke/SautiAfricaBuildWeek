@@ -23,9 +23,14 @@ function Header(props) {
         }
     });
     
+    let displayNone;
+
+    if(!isLoggedIn){
+        displayNone = {display: 'none'};
+    }
 
     return (
-        <div class="topnav">
+        <div style={displayNone} className="topnav">
             <Link to="/">Home</Link>
             <Link to="/market-price">{isLoggedIn ? "Market Price" : ""}</Link>
             <Link to="/set-price">{isLoggedIn ? "Set Price" : ""}</Link>

@@ -8,6 +8,8 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 import ReactDOM from "react-dom";
 import {UserReducer} from './reducers/UserReducer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const store = createStore(UserReducer, applyMiddleware(logger));
 

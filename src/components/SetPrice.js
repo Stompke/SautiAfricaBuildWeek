@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import { connect } from 'react-redux';
-import { MainSection} from '../StyledComponents/MainComponents';
+import { MainSection, Title} from '../StyledComponents/MainComponents';
+import NextBackNavigation from './NextBackNavigation';
 
 
 const initialCategories = [
@@ -31,7 +32,8 @@ const SetPrice = (props) => {
 
     return (
         <MainSection>
-            <h1>Profile</h1>
+            <NextBackNavigation back={() => props.history.goBack()} next={() => props.history.goForward()} />
+            <Title>Profile</Title>
             {categories.map(category => (
                 <Link to={`/set-price/${category.id}`}>
                     <div className="category">

@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Kodchasan&display=swap');
+
+* {
+  font-family: 'Montserrat';
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -256,6 +261,7 @@ Styles for the Gallery
   background-color: #ddd;
   color: black;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .market-price {
@@ -277,3 +283,4 @@ Styles for the Gallery
   display: flex;
   height: 100vh;
 }
+

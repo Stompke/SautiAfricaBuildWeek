@@ -6,6 +6,10 @@ import { inputStyle, formStyle, labelStyle} from '../styles/FormStyles';
 import { MainSection, FormContainer, CustomButton} from '../StyledComponents/MainComponents';
 import NextBackNavigation from './NextBackNavigation';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+
+import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+
 
 
 
@@ -79,9 +83,13 @@ const Register = (props) => {
                     <Field  style={inputStyle} type="password" name="password" placeholder="PASSWORD" />
 
                     <CustomButton  type='submit'>Sign Up</CustomButton>
+                    <Link to="/login">create account</Link>
+
                     {touched.username && errors.username && <p>{errors.username}</p>}
                     {touched.email && errors.email && <p>{errors.email}</p>}
                     {touched.password && errors.password && <p>{errors.password}</p>}
+
+                    
                 </Form>
             </FormContainer>
         </MainSection>

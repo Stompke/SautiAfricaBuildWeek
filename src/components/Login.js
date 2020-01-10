@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import NextBackNavigation from './NextBackNavigation';
 import { MainSection, FormContainer, CustomButton} from '../StyledComponents/MainComponents';
 import { inputStyle, formStyle, labelStyle} from '../styles/FormStyles';
+import { Link } from "react-router-dom";
+
+
+
 
 
 
@@ -49,8 +53,15 @@ class Login extends React.Component {
             .catch(err => {
                 console.log(err.response);
                 alert("Wrong user or password");
+
             });  
     };
+
+
+
+
+
+
 
     render() {
         return (
@@ -79,6 +90,9 @@ class Login extends React.Component {
                             />
                         </div>
                         <CustomButton className="postButton">Log in</CustomButton>
+
+                        <Link to="/register">create account</Link>
+                        
                     </form>
                 </FormContainer>
 
