@@ -3,8 +3,9 @@ import React from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import { MainSection, Title} from '../StyledComponents/MainComponents';
+import { MainSection, Title, FormContainer} from '../StyledComponents/MainComponents';
 import NextBackNavigation from './NextBackNavigation';
+import { inputStyle, formStyle, labelStyle} from '../styles/FormStyles';
 
 
 let userId;
@@ -46,38 +47,39 @@ class AddItem extends React.Component {
             <MainSection>
                 <NextBackNavigation back={() => this.props.history.goBack()} next={() => this.props.history.goForward()} />
                 <Title>Add Item</Title>
-                <div className="addFormStyles">
-                    <form onSubmit={this.add} className="regFormStyles">
-                        <div>
-                            <label className="label" htmlFor="item_name">Name:</label>
-                            <input className="titleStyles"
-                                type="text"
-                                name="item_name"
-                                value={this.state.credentials.item_name}
-                                onChange={this.handleChange}
-                            />
-                        </div>
-                        <div>
-                            <label className="label" htmlFor="item_price">Price:</label>
-                            <input className="titleStyles"
-                                type="number"
-                                name="item_price"
-                                value={this.state.credentials.item_price}
-                                onChange={this.handleChange}
-                            />
-                        </div>
-                        <div>
-                            <label className="label" htmlFor="item_description">Description:</label>
-                            <input className="titleStyles"
-                                type="text"
-                                name="item_description"
-                                value={this.state.credentials.item_description}
-                                onChange={this.handleChange}
-                            />
-                        </div>
-                        <button className="postButton">Add</button>
-                    </form>
-                </div>
+
+                    <FormContainer>
+                        <form style={formStyle} onSubmit={this.add} >
+                            <div>
+                                <label style={labelStyle} htmlFor="item_name">Name:</label>
+                                <input style={inputStyle}
+                                    type="text"
+                                    name="item_name"
+                                    value={this.state.credentials.item_name}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            <div>
+                                <label style={labelStyle} htmlFor="item_price">Price:</label>
+                                <input style={inputStyle}
+                                    type="number"
+                                    name="item_price"
+                                    value={this.state.credentials.item_price}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            <div>
+                                <label style={labelStyle} htmlFor="item_description">Description:</label>
+                                <input style={inputStyle}
+                                    type="text"
+                                    name="item_description"
+                                    value={this.state.credentials.item_description}
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                            <button className="postButton">Add</button>
+                        </form>
+                    </FormContainer>
             </MainSection>
         );
     }
