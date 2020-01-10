@@ -3,12 +3,15 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { connect } from 'react-redux';
 import { CustomButton, MainSection } from '../StyledComponents/MainComponents'; 
+import mapAgeCleaner from "map-age-cleaner";
 
 
 
 const Home = (props) => {
 
     const [isLoggedIn, setLogged] = useState(false);
+
+    const [locations, setLocations] = useState([]);
 
     useEffect(() => {
         if (localStorage.getItem("token")) {
@@ -34,6 +37,17 @@ const Home = (props) => {
         buttonLog = <CustomButton onClick={goTologin} className="postButton">Log in</CustomButton>
         buttonRegister = <CustomButton onClick={goToSignUp} className="postButton">Register</CustomButton>
     }
+
+    useEffect(() => {
+        axios
+        .get('https://build-week-africanmarketplace.herokuapp.com/api/location')
+        .then(res => {
+            setLocations(res.data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }, [])
  
     return (
         <MainSection>
@@ -44,6 +58,17 @@ const Home = (props) => {
                     {buttonRegister}
                     </form>
                 </div>
+
+            <div>
+                <h2>Locations You can Sell in!</h2>
+
+                {locations.map(location => {
+                    return(
+                    <div key={location.id}> {location.country} </div>
+                    )
+                })}
+            </div>
+            
         </MainSection>
     );
 }
