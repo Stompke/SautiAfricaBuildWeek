@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { connect } from 'react-redux';
 import { CustomButton, MainSection, Title } from '../StyledComponents/MainComponents'; 
 import mapAgeCleaner from "map-age-cleaner";
-import { heading, locationCard, locationCardButton } from '../styles/OtherStyles'
+import { heading, locationCard, locationCardButton, locationRow } from '../styles/OtherStyles'
 import NextBackNavigation from './NextBackNavigation';
 
 
@@ -68,7 +68,7 @@ const Home = (props) => {
 
             <div>
                 <h2>Locations You can Sell in!</h2>
-                <Row>
+                <Row style={locationRow}>
                     {locations.map(location => {
                         return(
                         // <div key={location.id}> {location.country} </div>

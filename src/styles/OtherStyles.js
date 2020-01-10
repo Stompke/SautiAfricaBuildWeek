@@ -21,3 +21,7 @@ export const locationCardButton = {
     fontFamily: 'Montserrat',
     background: '#000000'
 }
+
+export const locationRow = {
+    margin: '0'
+}

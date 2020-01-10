@@ -8,6 +8,7 @@ export  const MainSection = styled.div`
     width: 100%; 
     overflow-y: scroll;
     align-content: start;
+    padding: 10px;
 `;
 
 export const FormContainer = styled.div`
