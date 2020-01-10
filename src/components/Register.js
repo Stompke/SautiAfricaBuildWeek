@@ -83,7 +83,8 @@ const Register = (props) => {
                     <Field  style={inputStyle} type="password" name="password" placeholder="PASSWORD" />
 
                     <CustomButton  type='submit'>Sign Up</CustomButton>
-                    <Link to="/login">create account</Link>
+                    <br />
+                    <Link to="/login">Login</Link>
 
                     {touched.username && errors.username && <p>{errors.username}</p>}
                     {touched.email && errors.email && <p>{errors.email}</p>}

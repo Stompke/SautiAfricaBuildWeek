@@ -9,8 +9,8 @@ import { MainSection, Title} from '../StyledComponents/MainComponents';
 
 const LocationItems = (props) => {
 
-    const [locations, setLocations] = useState();
-    const [currentLocation, setCurrentLocation] = useState();
+    const [location, setLocation] = useState({});
+    const [currentLocationId, setCurrentLocationId] = useState({});
 
 
     // const [category, setCategory] = useState({
@@ -30,21 +30,26 @@ const LocationItems = (props) => {
     //         .catch(err => console.log(err));
     // }, []);
 
-let id;
+let lid;
+let newLocation
     useEffect(() => {
-        console.log(props);
+
         console.log('loaded');
-        id = props.match.params.id;
-        setCurrentLocation(id);
-        console.log(id);
+        lid = props.match.params.id;
+        setCurrentLocationId(lid);
+        console.log(lid);
     },[]);
 
     useEffect(() => {
         axios
         .get('https://build-week-africanmarketplace.herokuapp.com/api/location')
         .then(res => {
-            setCurrentLocation(res.data.find(location => location === 4))
-            console.log(currentLocation)
+            // setLocation(res.data.find(element => element.id === 4))
+            console.log(res.data)
+            console.log(currentLocationId)
+            console.log(lid)
+            newLocation = res.data.find(element => element.id === props.match.params.id)
+            console.log(newLocation)
         })
         .catch(err => {
             console.log(err)
@@ -54,7 +59,7 @@ let id;
     return (
         <MainSection>
             <NextBackNavigation back={() => props.history.goBack()} next={() => props.history.goForward()} />
-            <Title>Items in that Location {currentLocation}</Title>
+            <Title>Items in that</Title>
             {/* <div>
                 <img src={category.image} width="128" height="128" />
                 <h3>{category.title}</h3>
