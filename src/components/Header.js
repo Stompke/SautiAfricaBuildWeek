@@ -22,6 +22,7 @@ function Header(props) {
             setLogged(false);
         }
     });
+    
 
     return (
         <div class="topnav">
