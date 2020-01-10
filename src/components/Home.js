@@ -6,6 +6,7 @@ import { CustomButton, MainSection, Title } from '../StyledComponents/MainCompon
 import mapAgeCleaner from "map-age-cleaner";
 import { heading, locationCard, locationCardButton, locationRow } from '../styles/OtherStyles'
 import NextBackNavigation from './NextBackNavigation';
+import { Link } from 'react-router-dom';
 
 
 
@@ -76,7 +77,9 @@ const Home = (props) => {
                             <Card style={locationCard} body>
                             <CardTitle style={heading}>{location.country}</CardTitle>
                             <CardText></CardText>
+                            <Link to={`/location-items/${location.id}`}>
                             <Button style={locationCardButton}>See Products</Button>
+                            </Link>
                             </Card>
                         </Col>
                         )

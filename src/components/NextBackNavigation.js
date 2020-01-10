@@ -15,7 +15,7 @@ const NextBackNavigation = (props) => {
 
     return (
         <NavigationComponent>
-            <BackNavigation><i style={arrowStyles} class="fa fa-angle-left"></i> <div onClick={props.back} style={textPadding}>Back</div></BackNavigation>
+            <BackNavigation><i style={arrowStyles} className="fa fa-angle-left"></i> <div onClick={props.back} style={textPadding}>Back</div></BackNavigation>
             {/* <NextNavigation><div style={textPadding}>Next</div> <i  style={arrowStyles} class="fa fa-angle-right"></i></NextNavigation> */}
         </NavigationComponent>
     )
