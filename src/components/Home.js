@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { connect } from 'react-redux';
+import { CustomButton } from '../StyledComponents/MainComponents'; 
 
 const Home = (props) => {
 
@@ -28,8 +29,8 @@ const Home = (props) => {
     let buttonRegister;
     
     if (!isLoggedIn) {
-        buttonLog = <button onClick={goTologin} className="postButton">Log in</button>
-        buttonRegister = <button onClick={goToSignUp} className="postButton">Register</button>
+        buttonLog = <CustomButton onClick={goTologin} className="postButton">Log in</CustomButton>
+        buttonRegister = <CustomButton onClick={goToSignUp} className="postButton">Register</CustomButton>
     }
  
     return (

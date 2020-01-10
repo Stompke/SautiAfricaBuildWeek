@@ -1,5 +1,6 @@
 import React from 'react';
-import {NavigationComponent, NextNavigation, BackNavigation} from '../StyledComponents/MainComponents';
+import { NavigationComponent, NextNavigation, BackNavigation } from '../StyledComponents/MainComponents';
+
 
 const NextBackNavigation = (props) => {
 
@@ -15,7 +16,7 @@ const NextBackNavigation = (props) => {
     return (
         <NavigationComponent>
             <BackNavigation><i style={arrowStyles} class="fa fa-angle-left"></i> <div onClick={props.back} style={textPadding}>Back</div></BackNavigation>
-            <NextNavigation><div style={textPadding}>Next</div> <i  style={arrowStyles} class="fa fa-angle-right"></i></NextNavigation>
+            {/* <NextNavigation><div style={textPadding}>Next</div> <i  style={arrowStyles} class="fa fa-angle-right"></i></NextNavigation> */}
         </NavigationComponent>
     )
 }

@@ -1,6 +1,12 @@
 import React from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import { connect } from 'react-redux';
+import NextBackNavigation from './NextBackNavigation';
+import { MainSection, FormContainer, CustomButton} from '../StyledComponents/MainComponents';
+import { inputStyle, formStyle, labelStyle} from '../styles/FormStyles';
+
+
+
 
 class Login extends React.Component {
     state = {
@@ -48,13 +54,15 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className="home-page">
-                <h1>Please Log in:</h1>
-                <div className="addFormStyles">
-                    <form onSubmit={this.login} className="regFormStyles">
+            <MainSection >
+                <NextBackNavigation back={() => this.props.history.goBack()} next={() => this.props.history.goForward()} />
+
+                <FormContainer>
+                    <form onSubmit={this.login} style={formStyle}>
+                        <h2  style={labelStyle}>PLEASE LOG IN</h2>
                         <div>
                             <label htmlFor="username">Username:</label>
-                            <input className="titleStyles"
+                            <input style={inputStyle}
                                 type="text"
                                 name="username"
                                 value={this.state.credentials.username}
@@ -63,17 +71,18 @@ class Login extends React.Component {
                         </div>
                         <div>
                             <label htmlFor="password">Password:</label>
-                            <input className="titleStyles2"
+                            <input style={inputStyle}
                                 type="password"
                                 name="password"
                                 value={this.state.credentials.password}
                                 onChange={this.handleChange}
                             />
                         </div>
-                        <button className="postButton">Log in</button>
+                        <CustomButton className="postButton">Log in</CustomButton>
                     </form>
-                </div>
-            </div>
+                </FormContainer>
+
+            </MainSection>
         );
     }
 }

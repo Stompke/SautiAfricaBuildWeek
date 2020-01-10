@@ -202,10 +202,30 @@ Styles for the Gallery
 /* NavBar */
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background: #1B1411;
   overflow: hidden;
   color: white;
   text-decoration: none;
+  width: 25%;
+  /* height: 100vw; */
+  /* padding: 20px; */
+
+
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e5e5e5;
+  cursor: default;
+  z-index: 2;
+
+  max-width: 275px;
+    
 }
 
 /* Style the links inside the navigation bar */
