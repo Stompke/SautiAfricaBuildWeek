@@ -75,7 +75,7 @@ const Home = (props) => {
                         <Col  key={location.id} sm="3">
                             <Card style={locationCard} body>
                             <CardTitle style={heading}>{location.country}</CardTitle>
-                            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                            <CardText></CardText>
                             <Button style={locationCardButton}>See Products</Button>
                             </Card>
                         </Col>
