@@ -34,7 +34,7 @@ const Home = (props) => {
  
     return (
         <div className="home-page">
-            <h1>Welcome to the Market</h1>
+            <h1>Welcome to the Market!!!</h1>
                 <div className="login-form">
                     <form> 
                     {buttonLog}
