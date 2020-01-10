@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Kodchasan&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+main {
+  width: 85vw;
+  min-height: 80vh;
+  max-width: 1024px;
+  margin: 35px auto;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.grid-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.page-view {
+  min-height: 40vh;
+}
+
+.postButton {
+  text-align: center;
+  margin: 25px auto;
+  width: 150px;
+  height: 25px;
+  border: 1px solid rgb(241, 241, 241);
+  font-size: 0.8rem;
+}
+
+.grid-view div.card.ui {
+  margin: 1.25rem;
+}
+/*
+.main-img {
+  display: block;
+  border-radius: 100%;
+  margin: 0 auto;
+} */
+
+header h1 {
+  text-align: center;
+}
+.characterCard {
+  text-align: center;
+  margin: 5%;
+  width: 30%;
+}
+
+.search {
+  margin-left: 30%;
+}
+.grid {
+  margin-left: 36%;
+}
+
+.home-page h1 {
+  text-align: center;
+}
+
+.regFormStyles {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.regFormStyles label {
+  padding: 0 35px 0 0;
+}
+
+.titleStyles {
+  border: none;
+  background: rgb(222, 226, 236);
+  width: 500px;
+  height: 50px;
+  font-size: 1.5rem;
+  font-style: bold;
+  margin: 2%;
+}
+
+.label {
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  font-style: bold;
+}
+
+.titleStyles2 {
+  border: none;
+  background: rgb(241, 241, 241);
+  width: 500px;
+  height: 50px;
+  font-size: 1.5rem;
+  font-style: bold;
+  margin: 25px 0;
+}
+
+.column {
+  margin-left: 4%;
+}
+.card {
+  padding-left: 30%;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+/* 
+Styles for the Gallery
+*/
+
+.user-container {
+  font-family: 'Kodchasan', sans-serif;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.user-container a {
+  text-decoration: none;
+  color: black;
+  width: 33%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.user-card {
+  margin: 10px 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-head {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.user-name{
+  display: flex;
+}
+
+.user-avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px;
+  margin-top: 10px;
+}
+
+.user-img img {
+  width: 80%;
+  max-width: 100%;
+  height: 40vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px;
+}
+
+/* Styles for CardDetails*/
+.photo-container{
+  font-family: 'Kodchasan', sans-serif;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid slategray;
+  border-radius: 10px;
+  width: 60%;
+  margin: 50px auto;
+  background: lightgray;
+  box-shadow: 0 0 10px;
+}
+
+/* NavBar */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  color: white;
+  text-decoration: none;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  text-decoration: none;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: rgb(76, 130, 175);
+  color: white;
+  text-decoration: none;
+}
+
+.log-out:hover {
+  background-color: #ddd;
+  color: black;
+  text-decoration: none;
+}
+
+.market-price {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 3%;
+}
+
+.category {
+  background-color: #C0C0C0;
+  width: 40%;
+  margin: 5%;
+  margin-left: 30%;
+}
